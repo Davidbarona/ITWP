@@ -1,0 +1,45 @@
+@import './partials/general';
+
+.client {
+    &__image {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        & > img {
+            max-height: 20rem;
+            width: auto;
+            max-width: 10rem;
+        }
+    }
+    
+    &__testimony {
+        width: 100%;
+        text-align: center;
+        font-size: 2.6rem;
+        @media screen and (min-width: $desktop-small) {
+            font-size: 3.6rem;
+        }
+    }
+
+    & .swiper {
+        padding: 0 2rem;
+    }
+    & .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+    & .swiper-pagination-bullet {
+        background-color: $secondary-color;
+    }
+    & .swiper-button{
+        &-prev,&-next {
+            display: none;
+            @media screen and (min-width: $tablet) {
+                display: flex;
+            }
+            &::after {
+                color: $secondary-color;
+            }
+        }
+    }
+}

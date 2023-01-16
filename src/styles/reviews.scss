@@ -1,0 +1,79 @@
+@import './partials/general';
+
+.reviews{
+    margin: 0 auto;
+    background-color: #1D2734;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    margin-top: 4rem;
+    &__title{
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        max-width: 900px;
+        margin: 1rem auto 3.4rem;
+        padding: 0 2rem;
+        color: #ffff;
+        text-align: center;
+        @media screen and (min-width: $tablet){
+            font-size: 4rem;
+            line-height: 4.8rem;
+        }
+    }
+    & .swiper {
+        padding: 0 2rem;
+    }
+    & .swiper-pagination-bullet {
+        background-color: white;
+    }
+    .swiper-button{
+        &-prev,&-next {
+            display: none;
+            @media screen and (min-width: $tablet) {
+                display: flex;
+            }
+            &::after {
+                color: white
+            }
+        }
+    }
+}
+
+
+
+.container_reviews{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.review {
+    background:#FF943F;
+    margin: 0;
+    padding: 48px 28px 1.2rem;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.paragraph_reviews{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 2.4rem;
+    color: #ffff;
+}
+
+.sign__reviews{
+    margin-bottom: 0.6rem;
+    color:  #1D2734;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.mayor__reviews{
+    margin-bottom: 1rem;
+    color: #ffff;
+}

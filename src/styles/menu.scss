@@ -1,0 +1,86 @@
+@import 'partials/general';
+
+.menu {
+    &__button {
+        all: unset;
+        @media screen and (min-width: $desktop-large) {
+            display: none;
+        }
+    }
+    &__navigation {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        justify-content: space-evenly;
+        left: 0;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        transform: translateY(8.8rem);
+        transition: all 1s ease-in-out;
+        width: 100%;
+        &--active {
+            height: calc(100vh - 8.8rem);
+            opacity: 1;
+        }
+        @media screen and (min-width: $desktop-large) {
+            background-color: transparent;
+            flex-direction: row;
+            height: initial;
+            opacity: initial;
+            position: initial;
+            transform: initial;
+            transition: none;
+            justify-content: space-between;
+        }
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        &--work-with-us {
+            margin-top: 3rem;
+            @media screen and (min-width: $desktop-large) {
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+            }
+        }
+        @media screen and (min-width: $desktop-large) {
+            display: flex;
+        }
+    }
+    &__item {
+        padding: 3rem;
+        transition: all 0.3s ease-in;
+        &:hover {
+            color: $tertiary-color;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        @media screen and (min-width: $desktop-large) {
+            padding: 1.6rem;
+            color: white;
+        }
+        &--work-with-us {
+            display: inline;
+            background-color: $dark-color-2;
+            border-radius: 5rem;
+            color: white;
+            height: 4rem;
+            line-height: 0;
+            align-items: center;
+            font-weight: 600;
+            @media screen and (min-width: $desktop-large) {
+                display: flex;
+            }
+            &:hover {
+                color: white;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}
